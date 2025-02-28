@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class complex{
+public static void main(String[] args)
+{
+
+int real1,real2,img1,img2;
+Scanner s=new Scanner(System.in);
+System.out.println("enter reat part of first complex number:");
+real1=s.nextInt();
+System.out.println("enter img part of first complex number:");
+img1=s.nextInt();
+System.out.println("first complex no");
+System.out.println(real1 +"+" +img1+"i");
+System.out.println("enter real part of Second complex number:");
+real2=s.nextInt();
+System.out.println("enter imag part of second complex number:");
+img2=s.nextInt();
+System.out.println("Second complex no");
+System.out.println(real2 +"+" +img2+"i");
+System.out.println("result of addition operation");
+System.out.println(real1+real2 +"+"+ (img1+img2) +"i");
+
+
+
+
+}
+}
