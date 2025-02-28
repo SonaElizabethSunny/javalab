@@ -1,0 +1,27 @@
+class CPU {
+    int price = 25000;
+    
+    class Processor {
+        int cores = 9;
+        String manufacturer = "Intel";
+    }
+    
+    static class RAM {
+        int memory = 16;
+        String manufacturer = "ABC";
+    }
+}
+
+public class Third {
+    public static void main(String[] args) {
+        CPU myCPU = new CPU();
+        CPU.Processor myProcessor = myCPU.new Processor();
+        CPU.RAM myRAM = new CPU.RAM();
+        
+        System.out.println("CPU Price: " + myCPU.price);
+        System.out.println("Processor Cores: " + myProcessor.cores);
+        System.out.println("Processor Manufacturer: " + myProcessor.manufacturer);
+        System.out.println("RAM Memory: " + myRAM.memory + "GB");
+        System.out.println("RAM Manufacturer: " + myRAM.manufacturer);
+    }
+}
