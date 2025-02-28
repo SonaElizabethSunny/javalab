@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+class Product {
+    String pcode;
+    String pname;
+    double price;
+
+    public String display() {
+        return "Product Code: " + pcode + ", Product Name: " + pname + ", Price: " + price;
+    }
+}
+
+public class One {
+    public static void main(String[] args) {
+
+        Product product1 = new Product();
+        Product product2 = new Product();
+        Product product3 = new Product();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter details for Product 1:");
+        System.out.print("Enter Product Code: ");
+        product1.pcode = scanner.nextLine();
+        System.out.print("Enter Product Name: ");
+        product1.pname = scanner.nextLine();
+        System.out.print("Enter Price: ");
+        product1.price = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("Enter details for Product 2:");
+        System.out.print("Enter Product Code: ");
+        product2.pcode = scanner.nextLine();
+        System.out.print("Enter Product Name: ");
+        product2.pname = scanner.nextLine();
+        System.out.print("Enter Price: ");
+        product2.price = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("Enter details for Product 3:");
+        System.out.print("Enter Product Code: ");
+        product3.pcode = scanner.nextLine();
+        System.out.print("Enter Product Name: ");
+        product3.pname = scanner.nextLine();
+        System.out.print("Enter Price: ");
+        product3.price = scanner.nextDouble();
+
+        System.out.println("\nProduct Details:");
+        System.out.println(product1.display());
+        System.out.println(product2.display());
+        System.out.println(product3.display());
+
+        Product lowestPriceProduct;
+
+        if (product1.price < product2.price && product1.price < product3.price) {
+            lowestPriceProduct = product1;
+        } else if (product2.price < product1.price && product2.price < product3.price) {
+            lowestPriceProduct = product2;
+        } else {
+            lowestPriceProduct = product3;
+        }
+
+        System.out.println("\n" + lowestPriceProduct.pname + " (Code: " + lowestPriceProduct.pcode + ") has the lowest price.");
+       
+        scanner.close();
+    }
+}
