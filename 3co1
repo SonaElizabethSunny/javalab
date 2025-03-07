@@ -19,9 +19,5 @@ System.out.println("Second complex no");
 System.out.println(real2 +"+" +img2+"i");
 System.out.println("result of addition operation");
 System.out.println(real1+real2 +"+"+ (img1+img2) +"i");
-
-
-
-
 }
 }
